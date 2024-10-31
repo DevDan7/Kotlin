@@ -42,23 +42,64 @@ fun main () {
 //    }
 //
 ////TODO: OPERADORES $$, || Y !
+//
+//    print("Digite sua Idade:")
+//    val idade = readln().toInt()
+//
+//    print("Digite sua senha:")
+//    val senha = readln()
+//
+//    val senhaCorreta = "1234"
+//
+//    // Uso del Operador &&
+//
+//    if (idade >= 18 && senha == senhaCorreta) {
+//        println("Acesso permitido: Vocé é maior de idade e digito a senha correcta ")
+//    } else {
+//        println("Acesso Denegado: Idade insuficiente ou senha Incorreta")
+//    }
+//
+//    //Uso del operador ||
+//
+//    if (idade < 18 || senha != senhaCorreta) {
+//        println("Restriciones: Voce é menor de idade ou digito a senha errada")
+//    } else {
+//        println("Voce Atende os requisitos de idade e senha")
+//    }
+//
+//    val bloqueioTemporario = false
+//    if (!bloqueioTemporario) {
+//        println("Seu Acesso nao esta Bloqueado")
+//    } else {
+//        println("Seu Acesso esta Temporariamente Bloqueado")
+//
+//    }
 
-    println("Digite sua Idade:")
-    val idade = readln().toInt()
+    //TODO: Operado when
 
-    println("Digite sua senha:")
-    val senha = readln()
+    print("Digitte o nome do mes:")
+    val mes = readln() // este metodo pide al usuario que insira un mes y lo guarda en la variable mes
 
-    val senhaCorreta = "1234"
+    var  estacao = ""  // se declara una variable vacia que va a ser prenchida por el usuario
+    //tiene que ser var para poder ser modificada
 
-    if (idade >= 18 && senha == senhaCorreta) {
-        println("Acesso permitido: Vocé é maior de idade e digito a senha correcta ")
-    } else {
-        println("Acesso Denegado: Idade insuficiente ou senha Incorreta")
+    when (mes) {
+        "dezembro", "janeiro", "febereiro" -> estacao = "Verao"
+        "marco", "abril", "maio" -> estacao = "outono"
+        "juno", "julho", "agosto" -> estacao = "inverno"
+        "setembro", "outubro", "novembre" -> estacao = "primavera"
+        else -> println("Mes invalido: Digite un mes valido") // se usa un else dentro do when para cuando
+        // el usuario digite un comando errado
     }
 
+    // aqui usameos un if para cuando la estacion sea diferenta a la variable vacia
+    // porue el usuario ya digito un mes y fue aprovado por el else de arriba
 
-    
+    if (estacao != "") {
+        println("A estacao correspondente ao mes $mes é: $estacao")
+    }
+
+    // En este caso si no digitamos el mes correcto el codigo cierra. debe estar escrito de la misma forma al codigo
 
 }
 
