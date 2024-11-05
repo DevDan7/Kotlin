@@ -64,7 +64,7 @@ println(nome.uppercase())
 
 //todo: Funciones lambadas
 
-fun somalb1(num1: Int, num2: Int):   Int = num1 + num2 // esta funcion va a ser llamada en main
+//fun somalb1(num1: Int, num2: Int):   Int = num1 + num2 // esta funcion va a ser llamada en main
 
 
 
